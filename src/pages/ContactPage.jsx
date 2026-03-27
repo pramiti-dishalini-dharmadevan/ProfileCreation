@@ -1,12 +1,13 @@
 import React from 'react';
 import Contact from '../components/Contact';
+import { getAssetPath } from '../utils/assetHelper';
 
 export default function ContactPage() {
   return (
     <>
       <section
         className="relative flex items-center justify-center bg-no-repeat bg-cover bg-fixed"
-        style={{ backgroundImage: "url('/assets/Mount-Rainier.jpg')", backgroundPosition: '10% 0', padding: '110px 0 140px' }}
+        style={{ backgroundImage: `url('${getAssetPath('/assets/Mount-Rainier.jpg')}')`, backgroundPosition: '10% 0', padding: '110px 0 140px' }}
       >
         <div className="absolute inset-0 bg-[#050407] opacity-60"></div>
         <div className="relative text-center px-4">

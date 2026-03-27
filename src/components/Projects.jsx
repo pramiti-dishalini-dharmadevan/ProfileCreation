@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+import { getAssetPath } from '../utils/assetHelper';
 
 const allProjects = [
-  { title: 'Relgo.ai — AI Engineer', category: 'client', img: '/assets/Relgo-ai.jpg', sub: 'Building intelligence for business requirements as an AI Engineer, developing smart solutions to automate and enhance enterprise workflows.' },
-  { title: 'Research Data OneLake Platform', category: 'client', img: '/assets/onelake-architecture.png', sub: 'Centralized research and clinical data pipelines into Microsoft Fabric OneLake using Azure Data Factory and APIs.' },
-  { title: 'Immunotherapy Anomaly Detection System', category: 'client', img: '/assets/Anomaly-Detection.avif', sub: 'Machine learning models to detect anomalies in high-dimensional immunological research datasets.' },
-  { title: 'Enterprise Data Governance with Azure Purview', category: 'client', img: '/assets/Enterprise-Data-Governance.png', sub: 'Implemented enterprise data governance, cataloging, lineage tracking, and compliance using Azure Purview.' },
-  { title: 'Clinical Data Architecture & Compliance Framework', category: 'client', img: '/assets/Clinical-Data-Architecture.png', sub: 'Designed SQL-based data models and documentation to bridge research data architecture and regulatory compliance.' },
-  { title: 'Quantum Data Streaming Pipeline', category: 'client', img: '/assets/Quantum-Data-Streaming.jpg', sub: 'Real-time data ingestion pipeline using Databricks, PySpark, Docker, and Azure for quantum measurement data.' },
-  { title: 'Quantum Experiment Analytics Dashboard', category: 'client', img: '/assets/Quantum-Experiment.png', sub: 'Streamlit dashboards using Pandas and NumPy to visualize telemetry and experimental performance metrics.' },
-  { title: 'Azure Data Lake Claims Analytics Platform', category: 'client', img: '/assets/Data-Lake-Claims.png', sub: 'Developed ETL pipelines to ingest insurance claims and usage data into Azure Data Lake for analytics.' },
-  { title: 'Claims Denial Prediction Model', category: 'client', img: '/assets/Claims-Denial-Prediction.jpg', sub: 'Built regression and probability models to predict insurance claim denials and reduce processing delays.' },
-  { title: 'DocuSign Event Tracking Data Pipeline', category: 'client', img: '/assets/Event-Tracking-Data.png', sub: 'ETL pipeline to capture DocuSign support events and load them into QlikSense analytics systems.' },
-  { title: 'DocuSign Customer Usage Analytics Dashboard', category: 'client', img: '/assets/DocuSign-Customer.jpg', sub: 'Dimensional models and dashboards to analyze customer journeys and service attachment trends.' },
-  { title: 'Azure Stack CI/CD Monitoring Dashboard', category: 'client', img: '/assets/Stack-CI-CD.jpg', sub: 'Power BI dashboards to track CI/CD pipeline deployment metrics and build performance.' },
-  { title: 'Kusto Data Integration and Visualization Platform', category: 'client', img: '/assets/Data-Integration.avif', sub: 'Developed Kusto functions and console applications to ingest and analyze distributed cluster data.' },
-  { title: 'Azure Stack Automation Monitoring System', category: 'client', img: '/assets/Stack-Automation.png', sub: 'PowerShell automation scripts to monitor Azure Stack CI pipeline runs and reduce manual effort.' },
-  { title: 'LangChain Chatbot', category: 'fun', img: '/assets/langchain-chatbot.png', sub: 'A conversational chatbot built using LangChain, leveraging LLMs to handle dynamic multi-turn conversations.' },
-  { title: 'Job Monitoring Tool', category: 'fun', img: '/assets/job-monitoring.avif', sub: 'A fun tool that monitors job postings using OpenAI and LLMs to surface relevant opportunities and insights in real time.' }
+  { title: 'Relgo.ai — AI Engineer', category: 'client', img: getAssetPath('/assets/Relgo-ai.jpg'), sub: 'Building intelligence for business requirements as an AI Engineer, developing smart solutions to automate and enhance enterprise workflows.' },
+  { title: 'Research Data OneLake Platform', category: 'client', img: getAssetPath('/assets/onelake-architecture.png'), sub: 'Centralized research and clinical data pipelines into Microsoft Fabric OneLake using Azure Data Factory and APIs.' },
+  { title: 'Immunotherapy Anomaly Detection System', category: 'client', img: getAssetPath('/assets/Anomaly-Detection.avif'), sub: 'Machine learning models to detect anomalies in high-dimensional immunological research datasets.' },
+  { title: 'Enterprise Data Governance with Azure Purview', category: 'client', img: getAssetPath('/assets/Enterprise-Data-Governance.png'), sub: 'Implemented enterprise data governance, cataloging, lineage tracking, and compliance using Azure Purview.' },
+  { title: 'Clinical Data Architecture & Compliance Framework', category: 'client', img: getAssetPath('/assets/Clinical-Data-Architecture.png'), sub: 'Designed SQL-based data models and documentation to bridge research data architecture and regulatory compliance.' },
+  { title: 'Quantum Data Streaming Pipeline', category: 'client', img: getAssetPath('/assets/Quantum-Data-Streaming.jpg'), sub: 'Real-time data ingestion pipeline using Databricks, PySpark, Docker, and Azure for quantum measurement data.' },
+  { title: 'Quantum Experiment Analytics Dashboard', category: 'client', img: getAssetPath('/assets/Quantum-Experiment.png'), sub: 'Streamlit dashboards using Pandas and NumPy to visualize telemetry and experimental performance metrics.' },
+  { title: 'Azure Data Lake Claims Analytics Platform', category: 'client', img: getAssetPath('/assets/Data-Lake-Claims.png'), sub: 'Developed ETL pipelines to ingest insurance claims and usage data into Azure Data Lake for analytics.' },
+  { title: 'Claims Denial Prediction Model', category: 'client', img: getAssetPath('/assets/Claims-Denial-Prediction.jpg'), sub: 'Built regression and probability models to predict insurance claim denials and reduce processing delays.' },
+  { title: 'DocuSign Event Tracking Data Pipeline', category: 'client', img: getAssetPath('/assets/Event-Tracking-Data.png'), sub: 'ETL pipeline to capture DocuSign support events and load them into QlikSense analytics systems.' },
+  { title: 'DocuSign Customer Usage Analytics Dashboard', category: 'client', img: getAssetPath('/assets/DocuSign-Customer.jpg'), sub: 'Dimensional models and dashboards to analyze customer journeys and service attachment trends.' },
+  { title: 'Azure Stack CI/CD Monitoring Dashboard', category: 'client', img: getAssetPath('/assets/Stack-CI-CD.jpg'), sub: 'Power BI dashboards to track CI/CD pipeline deployment metrics and build performance.' },
+  { title: 'Kusto Data Integration and Visualization Platform', category: 'client', img: getAssetPath('/assets/Data-Integration.avif'), sub: 'Developed Kusto functions and console applications to ingest and analyze distributed cluster data.' },
+  { title: 'Azure Stack Automation Monitoring System', category: 'client', img: getAssetPath('/assets/Stack-Automation.png'), sub: 'PowerShell automation scripts to monitor Azure Stack CI pipeline runs and reduce manual effort.' },
+  { title: 'LangChain Chatbot', category: 'fun', img: getAssetPath('/assets/langchain-chatbot.png'), sub: 'A conversational chatbot built using LangChain, leveraging LLMs to handle dynamic multi-turn conversations.' },
+  { title: 'Job Monitoring Tool', category: 'fun', img: getAssetPath('/assets/job-monitoring.avif'), sub: 'A fun tool that monitors job postings using OpenAI and LLMs to surface relevant opportunities and insights in real time.' }
 ];
 
 const filters = ['All', 'Client projects', 'Just for fun'];

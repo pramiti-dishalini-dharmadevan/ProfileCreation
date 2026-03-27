@@ -1,13 +1,14 @@
 import React from 'react';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { getAssetPath } from '../utils/assetHelper';
 
 function Hero() {
   return (
     <section
       id="home"
       className="relative flex items-center justify-center bg-no-repeat bg-cover bg-fixed"
-      style={{ backgroundImage: "url('/assets/Mount-Rainier.jpg')", backgroundPosition: '10% 0', padding: '110px 0 140px' }}
+      style={{ backgroundImage: `url('${getAssetPath('/assets/Mount-Rainier.jpg')}')`, backgroundPosition: '10% 0', padding: '110px 0 140px' }}
     >
       <div className="absolute inset-0 bg-[#050407] opacity-60"></div>
       <div className="relative text-center px-4">

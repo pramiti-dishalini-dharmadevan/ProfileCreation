@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { getAssetPath } from '../utils/assetHelper';
 
 const posts = [
-  { id: 1, title: 'SAS Programming for Clinical Analytics', image: '/assets/sas-analysis.avif', link: 'https://substack.com/@vaishnavithecocreater/note/p-168163261?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Exploring SAS programming techniques used in clinical data analysis and reporting.' },
-  { id: 2, title: 'Data Preprocessing', image: '/assets/data-processing.png', link: 'https://substack.com/@vaishnavithecocreater/note/p-162730348?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Key steps and best practices for cleaning and preparing data for analysis.' },
-  { id: 3, title: 'Data Analysis with Python NumPy', image: '/assets/numpy.png', link: 'https://substack.com/@vaishnavithecocreater/note/p-174778385?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Hands-on guide to numerical data analysis using Python NumPy.' },
-  { id: 4, title: 'Application of Programming Interface', image: '/assets/api.svg', link: 'https://substack.com/@vaishnavithecocreater/note/p-153462904?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Understanding and applying APIs in real-world software development.' },
-  { id: 5, title: 'Data Modelling for Ecommerce', image: '/assets/database-diagram.png', link: 'https://substack.com/@vaishnavithecocreater/note/p-152876184?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Designing effective data models to power ecommerce platforms.' },
-  { id: 6, title: 'Insights of Dashboard Visualizations', image: '/assets/power-bi.jpg', link: 'https://substack.com/@vaishnavithecocreater/note/c-79986688?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Turning raw data into actionable insights through dashboard visualizations.' }
+  { id: 1, title: 'SAS Programming for Clinical Analytics', image: getAssetPath('/assets/sas-analysis.avif'), link: 'https://substack.com/@vaishnavithecocreater/note/p-168163261?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Exploring SAS programming techniques used in clinical data analysis and reporting.' },
+  { id: 2, title: 'Data Preprocessing', image: getAssetPath('/assets/data-processing.png'), link: 'https://substack.com/@vaishnavithecocreater/note/p-162730348?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Key steps and best practices for cleaning and preparing data for analysis.' },
+  { id: 3, title: 'Data Analysis with Python NumPy', image: getAssetPath('/assets/numpy.png'), link: 'https://substack.com/@vaishnavithecocreater/note/p-174778385?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Hands-on guide to numerical data analysis using Python NumPy.' },
+  { id: 4, title: 'Application of Programming Interface', image: getAssetPath('/assets/api.svg'), link: 'https://substack.com/@vaishnavithecocreater/note/p-153462904?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Understanding and applying APIs in real-world software development.' },
+  { id: 5, title: 'Data Modelling for Ecommerce', image: getAssetPath('/assets/database-diagram.png'), link: 'https://substack.com/@vaishnavithecocreater/note/p-152876184?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Designing effective data models to power ecommerce platforms.' },
+  { id: 6, title: 'Insights of Dashboard Visualizations', image: getAssetPath('/assets/power-bi.jpg'), link: 'https://substack.com/@vaishnavithecocreater/note/c-79986688?r=2kuclu&utm_source=notes-share-action&utm_medium=web', excerpt: 'Turning raw data into actionable insights through dashboard visualizations.' }
 ];
 
 const PER_PAGE = 3;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '../utils/assetHelper';
 import { FiMonitor, FiMail } from 'react-icons/fi';
 import { FaCloud, FaTwitter, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 import { SiPython } from 'react-icons/si';
@@ -23,7 +24,7 @@ function About() {
           <p className="text-sm italic text-gray-500 mb-8">
             When I'm not analyzing data, I like to do yoga, meditate, gardening and spending time with family.
           </p>
-          <img src="/assets/Vaishnavi_s.jpeg" alt="Vaishnavi" className="w-40 h-40 rounded-full object-cover mx-auto mb-8 shadow-lg" />
+          <img src={getAssetPath('/assets/Vaishnavi_s.jpeg')} alt="Vaishnavi" className="w-40 h-40 rounded-full object-cover mx-auto mb-8 shadow-lg" />
           <div className="flex justify-center gap-6">
             <a href="mailto:vaish.jana@gmail.com" className="text-gray-500 hover:text-gray-700"><FiMail size={24} /></a>
             <a href="https://www.facebook.com/vaishnavi.uma" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700"><FaFacebook size={24} /></a>
