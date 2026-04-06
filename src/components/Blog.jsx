@@ -28,7 +28,6 @@ export default function Blog() {
                 <h2 className="text-xl font-bold mb-2 tracking-wide" style={{ color: '#655e7a' }}>{post.title}</h2>
                 <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">
                   <span>👤 Posted By Vaishnavi</span>
-                  <span>🏷</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-6">{post.excerpt}</p>
                 <a
