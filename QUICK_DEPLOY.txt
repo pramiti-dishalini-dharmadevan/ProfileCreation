@@ -1,0 +1,61 @@
+# ⚡ QUICK DEPLOYMENT CHECKLIST
+
+## Simple 6-Step Deployment Process
+
+### 1️⃣ Make Changes
+Edit files in `src/` folder
+
+### 2️⃣ Test Locally
+```bash
+npm run dev
+```
+Check changes at http://localhost:5173/ProfileCreation/
+
+### 3️⃣ Build
+```bash
+npm run build
+```
+
+### 4️⃣ Commit
+```bash
+git add .
+git commit -m "Your message here"
+```
+
+### 5️⃣ Push to Main
+```bash
+git push origin main
+```
+
+### 6️⃣ Deploy to GitHub Pages
+```bash
+git subtree push --prefix dist origin gh-pages
+```
+
+✅ **Live in 1-2 minutes!**
+
+---
+
+## One-Line Deployment (After Making Changes)
+```bash
+npm run build && git add . && git commit -m "Update" && git push origin main && git subtree push --prefix dist origin gh-pages
+```
+
+---
+
+## Key Rules
+✅ Use `getAssetPath('/assets/filename')` for all images
+✅ Test with `npm run dev` before deploying
+✅ Always run `npm run build` before pushing
+✅ Add images to `public/assets/` folder
+❌ Don't edit `dist/` folder manually
+❌ Don't edit `vite.config.js` unless instructed
+
+---
+
+## Verify Live Website
+🌐 https://pramiti-dishalini-dharmadevan.github.io/ProfileCreation/
+
+---
+
+For detailed instructions, see `DEPLOYMENT_GUIDE.md`
